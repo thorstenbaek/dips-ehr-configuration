@@ -1,0 +1,28 @@
+{
+  "name": "dips-ehr-configuration",
+  "version": "1.0.0",
+  "description": "Configuration Server",
+  "main": "index.js",
+  "dependencies": {
+    "JSON": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ndjson": "^2.0.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thorstenbaek/dips-ehr-configuration.git"
+  },
+  "author": "Thor Stenbæk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thorstenbaek/dips-ehr-configuration/issues"
+  },
+  "homepage": "https://github.com/thorstenbaek/dips-ehr-configuration#readme"
+}

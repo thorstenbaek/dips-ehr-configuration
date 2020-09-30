@@ -17,7 +17,7 @@
         {
             "environment": "localhost:3000",
             "settings":             
-                {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net/"}            
+                {"FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com/"}            
         }        
     ]
 }

@@ -2,21 +2,22 @@
     "configurations":[
         {
             "environment": "default",
-            "settings": 
-            
-                {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net/"}
-            
-        },
-        {
-            "environment": "dev",
-            "settings": 
-            
-                {"FhirServiceUri" : "https://localhost:8080"}
-            
+            "settings":             
+                {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net/"}            
         },
         {
             "environment": "test",
             "settings": {}                                    
-        }
+        },
+        {
+            "environment": "dev",
+            "settings":             
+                {"FhirServiceUri" : "https://localhost:8080"}            
+        },
+        {
+            "environment": "localhost:3000",
+            "settings":             
+                {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net/"}            
+        }        
     ]
 }

@@ -1,21 +1,21 @@
 {
     "configurations":[
         {
-            "name": "default",
+            "environment": "default",
             "settings": 
             
                 {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net/"}
             
         },
         {
-            "name": "dev",
+            "environment": "dev",
             "settings": 
             
                 {"FhirServiceUri" : "https://localhost:8080"}
             
         },
         {
-            "name": "test",
+            "environment": "test",
             "settings": {}                                    
         }
     ]

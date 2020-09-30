@@ -1,12 +1,49 @@
-
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser")
 const fetch = require('node-fetch');
-const fs = require('fs')
 const port = 80;
 
 const app = express();
+
+let configurations = [];
+let environments = [];
+let settings = [];
+
+function FlattenSettings()
+{
+    configurations.forEach(configuration => {
+        Object.keys(configuration.settings).forEach(key => {
+            settings.push(
+            {                
+                environment: configuration.environment,
+                key: key,
+                value: configuration.settings[key]
+            }
+        )});
+    });
+}
+
+function ExtractEnvironments()
+{
+    configurations.forEach(configuration => {
+        environments.push(configuration.environment);
+    });
+}
+
+async function LoadConfiguration()
+{
+    let url = "https://raw.githubusercontent.com/thorstenbaek/dips-ehr-configuration/master/configuration.json";
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    data.configurations.forEach(configuration => {
+        configurations.push(configuration);            
+    });
+
+    ExtractEnvironments();
+    FlattenSettings();
+}
 
 var corsOptions = 
 {
@@ -16,27 +53,13 @@ var corsOptions =
     "origin": "*"    
 }
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
 
 app.use((req, res, next) => {       
     console.log(req.originalUrl);
     next();
 });
 
-let url = "https://github.com";
-let settings = { method: "GET" };
-
-var configurations = [];
-fetch(url, settings)
-    .then(res => res.json())
-    .then((json) => {
-    });
-
-fs.createReadStream('./configuration.json')
-   .on('data', function(data){
-      configurations.push(data);
-   });
-
+LoadConfiguration();
 
 app.get("/Configuration/:environment", (req, res) => {        
     var environment;
@@ -50,8 +73,50 @@ app.get("/Configuration/:environment", (req, res) => {
     }
     
     var configuration = configurations.filter(o => o.environment === environment);    
-    res.send(configuration[0]);
+    if (configuration.length == 0)
+    {
+        var configuration = configurations.filter(o => o.environment === "default");    
+    }
+    
+    res.send(configuration[0].settings);
+});
 
+app.get("/Setting/:environment/:setting", (req, res) => {
+    var result = "";
+    var setting = req.params.setting;    
+
+    var filteredForSetting = settings.filter(s => s.key === setting);     
+    if (filteredForSetting.length == 1)
+    {
+        result = filteredForSetting[0].value;
+    }
+    else
+    {
+        var environment = req.params.environment;
+        var envIdx = environments.indexOf(environment);
+        
+        if (envIdx < 0)
+        {
+            environment = "default";
+        }
+
+        var filteredForEnvironment = filteredForSetting.filter(s => s.environment === environment);
+        if (filteredForEnvironment.length > 0)
+        {
+            result = filteredForEnvironment[0].value;
+        }
+        else
+        {
+            filteredForEnvironment = filteredForSetting.filter(s => s.environment === "default");
+            if (filteredForEnvironment.length > 0)
+            {
+                result = filteredForEnvironment[0].value;
+            }
+        }        
+    }
+
+    console.log(result)
+    res.send(result);
 });
 
 app.listen(port, () => {

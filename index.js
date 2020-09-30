@@ -1,7 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const fetch = require('node-fetch');
+const Cache = require('medusajs');
 const port = 80;
+const cacheExpiration = 300000; // 5 minutes
 
 const app = express();
 
@@ -30,8 +32,14 @@ function ExtractEnvironments()
     });
 }
 
-async function LoadConfiguration()
+async function Refresh()
 {
+    console.log("Refreshing configuration from json");
+
+    configurations = [];
+    environments = [];
+    settings = [];
+
     let url = "https://raw.githubusercontent.com/thorstenbaek/dips-ehr-configuration/master/configuration.json";
     
     const response = await fetch(url);
@@ -55,44 +63,53 @@ var corsOptions =
 app.use(cors(corsOptions));
 
 app.use((req, res, next) => {       
+    //TODO consider moving caching here
     console.log(req.originalUrl);
     next();
 });
 
-LoadConfiguration();
+async function GetConfiguration(environment)
+{    
+    await Refresh();
 
-app.get("/Configuration/:environment", (req, res) => {        
-    var environment;
-    if (req.params.environment === "")
-    {
-        environment = "default";
-    }
-    else
-    {
-        environment = req.params.environment;
-    }
-    
     var configuration = configurations.filter(o => o.environment === environment);    
     if (configuration.length == 0)
     {
         var configuration = configurations.filter(o => o.environment === "default");    
     }
-    
-    res.send(configuration[0].settings);
-});
 
-app.get("/Setting/:environment/:setting", (req, res) => {
-    var result = "";
-    var setting = req.params.setting;    
+    return configuration;
+}
+
+app.get("/Configuration/:environment", (request, response) => {
+    var environment = request.params.environment;
+    if (environment === "")
+    {
+        environment = "default";
+    }
+    
+    Cache.get(request.url, 
+            (resolve, reject) => 
+            {
+                resolve(GetConfiguration(environment));
+            }, 
+            cacheExpiration)
+        .then(result => {
+            response.send(result);        
+    });            
+})
+
+async function GetSetting(environment, setting)
+{    
+    await Refresh();
 
     var filteredForSetting = settings.filter(s => s.key === setting);     
     if (filteredForSetting.length == 1)
     {
-        result = filteredForSetting[0].value;
+        return filteredForSetting[0].value;
     }
     else
-    {
-        var environment = req.params.environment;
+    {    
         var envIdx = environments.indexOf(environment);
         
         if (envIdx < 0)
@@ -103,20 +120,35 @@ app.get("/Setting/:environment/:setting", (req, res) => {
         var filteredForEnvironment = filteredForSetting.filter(s => s.environment === environment);
         if (filteredForEnvironment.length > 0)
         {
-            result = filteredForEnvironment[0].value;
+            return filteredForEnvironment[0].value;
         }
         else
         {
             filteredForEnvironment = filteredForSetting.filter(s => s.environment === "default");
             if (filteredForEnvironment.length > 0)
             {
-                result = filteredForEnvironment[0].value;
+                return filteredForEnvironment[0].value;
             }
         }        
     }
 
-    console.log(result)
-    res.send(result);
+    return "";
+}
+
+app.get("/Setting/:environment/:setting", (request, response) => {       
+    Cache.get(request.url, 
+        (resolve, reject) => 
+        {
+            resolve(GetSetting(
+                request.params.environment,
+                request.params.setting
+            ));
+        }, 
+        cacheExpiration)
+    .then(result => {
+        console.log(result)
+        response.send(result);
+    });       
 });
 
 app.listen(port, () => {

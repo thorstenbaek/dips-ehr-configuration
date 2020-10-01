@@ -11,7 +11,7 @@
                 {"FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com"}            
         },
         {
-            "environment": "dips-ehr-app.northeurope.cloudapp.azure.com",
+            "environment": "dips-ehr-app.northeurope.cloudapp.azure.com:80",
             "settings":             
                 {"FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com"}            
         }

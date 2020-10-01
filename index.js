@@ -78,7 +78,7 @@ async function GetConfiguration(environment)
         var configuration = configurations.filter(o => o.environment === "default");    
     }
 
-    return configuration;
+    return configuration[0].settings;
 }
 
 app.get("/Configuration/:environment", (request, response) => {

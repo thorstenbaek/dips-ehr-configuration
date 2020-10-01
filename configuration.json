@@ -13,7 +13,7 @@
         {
             "environment": "dips-ehr-app.northeurope.cloudapp.azure.com",
             "settings":             
-                {"FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com"}            
+                {"FhirServiceUri" : "https://r4.smarthealthit.org"}                
         },
         {
             "environment": "localhost",

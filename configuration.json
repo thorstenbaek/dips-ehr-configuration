@@ -31,6 +31,19 @@
                         {"name": "NAV Pleiepenger", "url": "https://nav-smartonfhir-app.azurewebsites.net"}
                     ]
                 }         
+        },
+        {
+            "environment": "localhost:3000",
+            "settings":             
+                {
+                    "FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart", "url": "http://growth-chart-app.northeurope.cloudapp.azure.com"}, 
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.northeurope.cloudapp.azure.com"}, 
+                        {"name": "NAV Pleiepenger", "url": "https://nav-smartonfhir-app.azurewebsites.net"}
+                    ]
+                }         
         }
     ]
 }

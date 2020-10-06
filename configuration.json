@@ -49,7 +49,7 @@
             "environment": "dips-ehr-app.norwayeast.cloudapp.azure.com",
             "settings":             
                 {
-                    "FhirServiceUri" : "http://dips-ehr-service.norwayeast.cloudapp.azure.com",
+                    "FhirServiceUri" : "http://dips-fhir-service.norwayeast.cloudapp.azure.com",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart", "url": "http://growth-chart-app.norwayeast.cloudapp.azure.com"}, 

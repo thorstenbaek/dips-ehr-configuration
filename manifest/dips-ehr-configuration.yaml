@@ -15,8 +15,9 @@ spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: dips-ehr-service
-        image: thorstenbaekcontainerregistry.azurecr.io/dips-ehr-configuration:v1.0.0.0
+      - name: dips-ehr-configuration
+        # image: dipssandboxcontainerrepository.azurecr.io/dips-ehr-configuration:v1.0.0.0
+        image: thorstenbaek/dips-ehr-configuration:v1.0.0.0
         ports:        
         - containerPort: 80
 ---
@@ -27,7 +28,7 @@ metadata:
   labels:
     name: dips-ehr-configuration
   annotations:
-    service.beta.kubernetes.io/azure-dns-label-name: dips-ehr-configuration # => http://dips-ehr-configuration.northeurope.cloudapp.azure.com/
+    service.beta.kubernetes.io/azure-dns-label-name: dips-ehr-configuration # => http://dips-ehr-configuration.norwayeast.cloudapp.azure.com/
 spec:
   type: LoadBalancer
   ports:

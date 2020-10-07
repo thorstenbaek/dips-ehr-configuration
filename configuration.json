@@ -54,7 +54,7 @@
                     [
                         {"name": "Growth Chart", "url": "http://growth-chart-app.norwayeast.cloudapp.azure.com"}, 
                         {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.norwayeast.cloudapp.azure.com"}, 
-                        {"name": "NAV Pleiepenger", "url": "https://nav-smartonfhir-app.norwayeast.cloudapp.azure.com"}
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
                     ]
                 }         
         }

@@ -31,7 +31,7 @@
             "environment": "localhost:3000",
             "settings":             
                 {
-                    "FhirServiceUri" : "http://dips-fhir-service.norwayeast.cloudapp.azure.com",
+                    "FhirServiceUri" : "https://r3.smarthealthit.org",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart", "url": "http://growth-chart-app.norwayeast.cloudapp.azure.com"}, 

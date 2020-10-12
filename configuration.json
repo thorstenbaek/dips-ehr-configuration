@@ -53,6 +53,19 @@
                         {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
                     ]
                 }         
+        },
+        {
+            "environment": "dips-ehr-app.localhost",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://dips-fhir-service.localhost",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart", "url": "https://growth-chart-app.localhost"},                         
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.localhost"}, 
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
+                    ]
+                }         
         }
     ]
 }

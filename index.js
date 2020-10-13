@@ -81,14 +81,17 @@ async function GetConfiguration(environment)
     return configuration[0].settings;
 }
 
-app.get("/Configuration/:environment", (request, response) => {
+app.get("/Configuration/:environment", async (request, response) => {
     var environment = request.params.environment;
     if (environment === "")
     {
         environment = "default";
     }
+
+    var result = await GetConfiguration(environment);
+    response.send(result);        
     
-    Cache.get(request.url, 
+    /*Cache.get(request.url, 
             (resolve, reject) => 
             {
                 resolve(GetConfiguration(environment));
@@ -96,7 +99,7 @@ app.get("/Configuration/:environment", (request, response) => {
             cacheExpiration)
         .then(result => {
             response.send(result);        
-    });            
+    });*/
 })
 
 async function GetSetting(environment, setting)
@@ -135,8 +138,12 @@ async function GetSetting(environment, setting)
     return "";
 }
 
-app.get("/Setting/:environment/:setting", (request, response) => {       
-    Cache.get(request.url, 
+app.get("/Setting/:environment/:setting", async (request, response) => {       
+
+    var result = await GetSetting(request.params.environment, request.params.setting);
+    response.send(result);
+    
+    /*Cache.get(request.url, 
         (resolve, reject) => 
         {
             resolve(GetSetting(
@@ -148,7 +155,7 @@ app.get("/Setting/:environment/:setting", (request, response) => {
     .then(result => {
         console.log(result)
         response.send(result);
-    });       
+    });*/
 });
 
 app.listen(port, () => {

@@ -66,6 +66,19 @@
                         {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
                     ]
                 }         
-        }
+        },
+        {
+            "environment": "dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://dips-fhir-service.dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart", "url": "https://growth-chart-app.dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com"},                         
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com"}, 
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
+                    ]
+                }         
+        }        
     ]
 }

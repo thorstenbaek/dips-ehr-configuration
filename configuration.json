@@ -71,7 +71,7 @@
             "environment": "dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://dips-fhir-service.dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com",
+                    "FhirServiceUri" : "https://dips-fhir-service.sandbox-dev.norwayeast.cloudapp.azure.com",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart", "url": "https://growth-chart-app.sandbox-dev.norwayeast.cloudapp.azure.com"},                         

@@ -4,12 +4,7 @@
             "environment": "default",
             "settings":             
                 {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net"}            
-        },        
-        {
-            "environment": "localhost:3000",
-            "settings":             
-                {"FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com"}            
-        },
+        },                
         {
             "environment": "dips-ehr-app.northeurope.cloudapp.azure.com",
             "settings":             
@@ -36,14 +31,54 @@
             "environment": "localhost:3000",
             "settings":             
                 {
-                    "FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com",
+                    "FhirServiceUri" : "https://r3.smarthealthit.org",
                     "SmartOnFhirApps" : 
                     [
-                        {"name": "Growth Chart", "url": "http://growth-chart-app.northeurope.cloudapp.azure.com"}, 
-                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.northeurope.cloudapp.azure.com"}, 
-                        {"name": "NAV Pleiepenger", "url": "https://nav-smartonfhir-app.azurewebsites.net"}
+                        {"name": "Growth Chart", "url": "http://growth-chart-app.norwayeast.cloudapp.azure.com"}, 
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app"}, 
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.norwayeast.cloudapp.azure.com"}, 
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
                     ]
                 }         
-        }
+        },
+        {
+            "environment": "dips-ehr-app.norwayeast.cloudapp.azure.com",
+            "settings":             
+                {
+                    "FhirServiceUri" : "http://dips-fhir-service.norwayeast.cloudapp.azure.com",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart", "url": "http://growth-chart-app.norwayeast.cloudapp.azure.com"},                         
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.norwayeast.cloudapp.azure.com"}, 
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
+                    ]
+                }         
+        },
+        {
+            "environment": "dips-ehr-app.localhost",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://dips-fhir-service.localhost",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart", "url": "https://growth-chart-app.localhost"},                         
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.localhost"}, 
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
+                    ]
+                }         
+        },
+        {
+            "environment": "dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://dips-fhir-service.sandbox-dev.norwayeast.cloudapp.azure.com",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart", "url": "https://growth-chart-app.sandbox-dev.norwayeast.cloudapp.azure.com"},                         
+                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.sandbox-dev.norwayeast.cloudapp.azure.com"}, 
+                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
+                    ]
+                }         
+        }        
     ]
 }

@@ -34,7 +34,7 @@
                     "FhirServiceUri" : "https://r3.smarthealthit.org",
                     "SmartOnFhirApps" : 
                     [
-                        {"name": "Growth Chart", "url": "http://growth-chart-app.norwayeast.cloudapp.azure.com"}, 
+                        {"name": "Growth Chart", "url": "https://growth-chart-app.sandbox-dev.norwayeast.cloudapp.azure.com"}, 
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app"}, 
                         {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.norwayeast.cloudapp.azure.com"}, 
                         {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}

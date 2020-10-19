@@ -31,7 +31,7 @@
             "environment": "localhost:3000",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://localhost:8080",
+                    "FhirServiceUri" : "http://localhost:8080",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart Https", "url": "https://growth-chart-app.sandbox-dev.norwayeast.cloudapp.azure.com"}, 

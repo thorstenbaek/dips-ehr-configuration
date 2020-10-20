@@ -31,8 +31,8 @@
             "environment": "localhost:3000",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://r3.smarthealthit.org",
-                    "_FhirServiceUri" : "http://localhost:8080",
+                    "_FhirServiceUri" : "https://r3.smarthealthit.org",
+                    "FhirServiceUri" : "http://localhost:8080",
                     "SmartOnFhirApps" : 
                     [                        
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app"}, 

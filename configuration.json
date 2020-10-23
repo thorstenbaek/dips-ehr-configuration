@@ -45,7 +45,7 @@
                         {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app"},
                         {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app"},
                         {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app"},                       
-                        {"name": "NAV Pleiepenger", "url": "http://localhost:3001/app"}
+                        {"name": "NAV Pleiepenger", "url": "http://localhost:3000/app"}
                     ]
                 }         
         },

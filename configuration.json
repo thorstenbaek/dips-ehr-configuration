@@ -57,11 +57,11 @@
                     "SecurityServiceUri" : "https://dips-ehr-security.sandbox-dev.norwayeast.cloudapp.azure.com",
                     "SmartOnFhirApps" : 
                     [
-                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app"},
-                        {"name": "Blood Pressure Centiles", "url": "https://examples.smarthealthit.org/bp-centiles-app"},
-                        {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app"},
-                        {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app"},
-                        {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app"},                       
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},                        
+                        {"name": "Blood Pressure Centiles", "url": "https://examples.smarthealthit.org/bp-centiles-app/launch.html"},
+                        {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app/launch.html"},
+                        {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app/launch.html"},
+                        {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app/launch.html"},                       
                         {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
                     ]
                 }         

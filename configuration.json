@@ -1,37 +1,22 @@
 {
     "configurations":[
         {
-            "environment": "default",
-            "settings":             
-                {"FhirServiceUri" : "https://dips-ehr-service.azurewebsites.net"}            
-        },                
-        {
-            "environment": "dips-ehr-app.northeurope.cloudapp.azure.com",
+            "environment": "default",            
             "settings":             
                 {
-                    "FhirServiceUri" : "https://r3.smarthealthit.org",
-                    "_FhirServiceUri" : "https://r4.smarthealthit.org",
-                    "__FhirServiceUri" : "http://dips-ehr-service.northeurope.cloudapp.azure.com"
-                }
-        },        
-        {
-            "environment": "localhost:3000",
-            "settings":             
-                {
-                    "_FhirServiceUri" : "https://r3.smarthealthit.org",
-                    "FhirServiceUri" : "http://localhost:8080",
+                    "FhirServiceUri" : "https://dips-fhir-service.sandbox-dev.norwayeast.cloudapp.azure.com",
+                    "SecurityServiceUri" : "https://dips-ehr-security.sandbox-dev.norwayeast.cloudapp.azure.com",
                     "SmartOnFhirApps" : 
-                    [                        
-                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app"}, 
-                        {"name": "Blood Pressure Centiles", "url": "https://examples.smarthealthit.org/bp-centiles-app"},
-                        {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app"},
-                        {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app"},
-                        {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app"},                        
-                        {"name": "DIPS Demo", "url": "https://dips-smartonfhir-app.norwayeast.cloudapp.azure.com"}, 
+                    [
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},                        
+                        {"name": "Blood Pressure Centiles", "url": "https://examples.smarthealthit.org/bp-centiles-app/launch.html"},
+                        {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app/launch.html"},
+                        {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app/launch.html"},
+                        {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app/launch.html"},                       
                         {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
                     ]
                 }         
-        },
+        },                                 
         {
             "environment": "dips-ehr-app.localhost",
             "settings":             

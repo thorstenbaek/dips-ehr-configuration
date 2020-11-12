@@ -35,11 +35,11 @@
                 }         
         },
         {
-            "environment": "dips-ehr-app.sandbox-dev.norwayeast.cloudapp.azure.com",
+            "environment": "dips-ehr-app.api.dips.no",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://dips-fhir-service.sandbox-dev.norwayeast.cloudapp.azure.com",
-                    "SecurityServiceUri" : "https://dips-ehr-security.sandbox-dev.norwayeast.cloudapp.azure.com",
+                    "FhirServiceUri" : "https://dips-fhir-service.api.dips.no",
+                    "SecurityServiceUri" : "https://dips-ehr-security.api.dips.no",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},                        

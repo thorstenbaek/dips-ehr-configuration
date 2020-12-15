@@ -55,7 +55,7 @@
             "environment": "dips-ehr-app.api.dips.no",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://dips-fhir-service.api.dips.no",
+                    "FhirServiceUri" : "https://dips.fhir.service.api.dips.no",
                     "SecurityServiceUri" : "https://dips-ehr-security.api.dips.no",
                     "SmartOnFhirApps" : 
                     [

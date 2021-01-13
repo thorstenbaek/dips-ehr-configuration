@@ -48,6 +48,19 @@
                 }         
         },
         {
+            "environment": "sof-demo.dips-ehr-app.api.dips.no",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://sof-demo.dips.fhir.service.api.dips.no",
+                    "SecurityServiceUri" : "https://sof-demo.dips-ehr-security.api.dips.no",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                        {"name": "NAV Pleiepenger", "url": "https://sof-demo.nav-pleiepenger.api.dips.no/"}
+                    ]
+                }         
+        },
+        {
             "environment": "eivind.dips-ehr-app.api.dips.no",
             "settings":             
                 {

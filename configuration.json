@@ -4,8 +4,8 @@
             "environment": "default",            
             "settings":             
                 {
-                    "FhirServiceUri" : "https://dips-fhir-service.sandbox-dev.norwayeast.cloudapp.azure.com",
-                    "SecurityServiceUri" : "https://dips-ehr-security.sandbox-dev.norwayeast.cloudapp.azure.com",
+                    "FhirServiceUri" : "https://dips.fhir.service.api.dips.no",
+                    "SecurityServiceUri" : "https://dips-ehr-security.api.dips.no",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},                        
@@ -13,27 +13,10 @@
                         {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app/launch.html"},
                         {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app/launch.html"},
                         {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app/launch.html"},                       
-                        {"name": "NAV Pleiepenger", "url": "http://46.9.153.70:2325/app"}
+                        {"name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"}
                     ]
                 }         
-        },  
-        {
-            "environment": "localhost:3000",
-            "settings":             
-                {
-                    "FhirServiceUri" : "https://dips.fhir.service.localhost",
-                    "SecurityServiceUri" : "https://dips-ehr-security.localhost",
-                    "SmartOnFhirApps" : 
-                    [
-                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "Blood Pressure Centiles", "url": "https://examples.smarthealthit.org/bp-centiles-app/launch.html"},
-                        {"name": "Cardiac Risk App", "url": "https://examples.smarthealthit.org/cardiac-risk-app/launch.html"},
-                        {"name": "Diabetes Monograph", "url": "https://examples.smarthealthit.org/diabetes-monograph-app/launch.html"},
-                        {"name": "Disease Monograph", "url": "https://examples.smarthealthit.org/disease-monograph-app/launch.html"},                       
-                        {"name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.localhost/"}
-                    ]
-                }         
-        },
+        },          
         {
             "environment": "test.dips-ehr-app.localhost",
             "settings":             
@@ -46,17 +29,43 @@
                         {"name": "NAV Pleiepenger", "url": "https://test.nav-pleiepenger.localhost/"}
                     ]
                 }         
-        },
+        },        
         {
-            "environment": "sof-demo.dips-ehr-app.api.dips.no",
+            "environment": "http://localhost:3000/",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://sof-demo.dips.fhir.service.api.dips.no",
-                    "SecurityServiceUri" : "https://sof-demo.dips-ehr-security.api.dips.no",
+                    "FhirServiceUri" : "https://dips.fhir.service.api.dips.no",
+                    "SecurityServiceUri" : "https://dips-ehr-security.api.dips.no",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "NAV Pleiepenger", "url": "https://sof-demo.nav-pleiepenger.api.dips.no/"}
+                        {"name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"}
+                    ]
+                }         
+        },        
+        {
+            "environment": "http://localhost:8080/",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://dips.fhir.service.api.dips.no",
+                    "SecurityServiceUri" : "https://dips-ehr-security.api.dips.no",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                        {"name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"}
+                    ]
+                }         
+        },        
+        {
+            "environment": "julie.dips-ehr-app.api.dips.no",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://julie.dips.fhir.service.api.dips.no",
+                    "SecurityServiceUri" : "https://julie.dips-ehr-security.api.dips.no",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                        {"name": "NAV Pleiepenger", "url": "https://julie.nav-pleiepenger.api.dips.no/"}
                     ]
                 }         
         },

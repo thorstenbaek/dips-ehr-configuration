@@ -57,7 +57,7 @@
                 }         
         },        
         {
-            "environment": "julie.dips-ehr-app.api.dips.no",
+            "environment": "ehr-notes.dips-ehr-app.api.dips.no",
             "settings":             
                 {
                     "FhirServiceUri" : "https://julie.dips.fhir.service.api.dips.no",
@@ -65,7 +65,8 @@
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "NAV Pleiepenger", "url": "https://julie.nav-pleiepenger.api.dips.no/"}
+                        {"name": "NAV Pleiepenger", "url": "https://julie.nav-pleiepenger.api.dips.no/"},
+                        {"name": "EHR Notes", "url": "http://localhost:3000/"}
                     ]
                 }         
         },

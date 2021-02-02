@@ -71,6 +71,20 @@
                 }         
         },
         {
+            "environment": "ehr-notes2.dips-ehr-app.api.dips.no",
+            "settings":             
+                {
+                    "FhirServiceUri" : "https://ehr-notes2.dips.fhir.service.api.dips.no",
+                    "SecurityServiceUri" : "https://ehr-notes2.dips-ehr-security.api.dips.no",
+                    "SmartOnFhirApps" : 
+                    [
+                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                        {"name": "NAV Pleiepenger", "url": "https://ehr-notes2.nav-pleiepenger.api.dips.no/"},
+                        {"name": "EHR Notes", "url": "https://ehr-notes2.dips-ehr-notes.api.dips.no/"}
+                    ]
+                }         
+        },
+        {
             "environment": "eivind.dips-ehr-app.api.dips.no",
             "settings":             
                 {

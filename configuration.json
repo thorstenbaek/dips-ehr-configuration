@@ -65,8 +65,9 @@
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "NAV Pleiepenger", "url": "https://ehr-notes.nav-pleiepenger.api.dips.no/"},
-                        {"name": "EHR Notes", "url": "http://localhost:8080/"}
+                        {"name": "NAV Pleiepenger", "url": "https://ehr-notes.nav-pleiepenger.api.dips.no/"},                        
+                        {"name": "EHR Notes", "url": "https://ehr-notes.dips-ehr-notes.api.dips.no/"}
+                        {"name": "Localhost EHR Notes", "url": "http://localhost:8080/"}
                     ]
                 }         
         },

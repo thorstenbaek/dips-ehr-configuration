@@ -31,7 +31,7 @@
                 }         
         },        
         {
-            "environment": "http://localhost:3000/",
+            "environment": "localhost:3000",
             "settings":             
                 {
                     "FhirServiceUri" : "https://ehr-notes2.dips.fhir.service.api.dips.no",
@@ -46,7 +46,7 @@
                 }         
         },        
         {
-            "environment": "http://localhost:8080/",
+            "environment": "localhost:8080",
             "settings":             
                 {
                     "FhirServiceUri" : "https://dips.fhir.service.api.dips.no",

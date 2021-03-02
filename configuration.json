@@ -78,12 +78,13 @@
             "settings":             
                 {
                     "FhirServiceUri" : "https://ehr-notes2.dips.fhir.service.api.dips.no",
-                    "SecurityServiceUri" : "https://ehr-notes2.dips-ehr-security.api.dips.no",
+                    "SecurityServiceUri" : "http://localhost:8000",
                     "SmartOnFhirApps" : 
                     [
                         {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
                         {"name": "NAV Pleiepenger", "url": "https://ehr-notes2.nav-pleiepenger.api.dips.no/"},
                         {"name": "EHR Notes", "url": "https://ehr-notes2.dips-ehr-notes.api.dips.no/"}
+                        {"name": "Localhost EHR Notes", "url": "http://localhost:8080/"}
                     ]
                 }         
         },

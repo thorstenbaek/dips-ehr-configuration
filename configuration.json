@@ -39,10 +39,21 @@
                     "SecurityServiceUri" : "http://localhost:8000",
                     "SmartOnFhirApps" : 
                     [
-                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"},
-                        {"name": "EHR Notes", "url": "https://ehr-notes.dips-ehr-notes.api.dips.no/"},
-                        {"name": "Localhost EHR Notes", "url": "http://localhost:8080/"}
+                        {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                        {"context": "patient", "name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"},
+                        {"context": "patient", "name": "EHR Notes", "url": "https://ehr-notes.dips-ehr-notes.api.dips.no/"},
+                        {
+                            "context": "document", 
+                            "mime-type": "application/markdown",
+                            "name": "Localhost EHR Notes", 
+                            "url": "http://localhost:8080/", 
+                        },
+                        {
+                            "context": "document", 
+                            "mime-type": "image/jpeg",
+                            "name": "Image Viewer", 
+                            "url": "http://localhost:8888/", 
+                        }
                     ]
                 }         
         },        

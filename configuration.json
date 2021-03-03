@@ -36,7 +36,7 @@
             "settings":             
                 {
                     "FhirServiceUri" : "https://ehr-notes2.dips.fhir.service.api.dips.no",
-                    "SecurityServiceUri" : "http://localhost:8000",
+                    "SecurityServiceUri" : "https://ehr-notes2.dips-ehr-security.api.dips.no",
                     "SmartOnFhirApps" : 
                     [
                         {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},

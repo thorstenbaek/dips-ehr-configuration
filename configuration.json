@@ -46,13 +46,13 @@
                             "context": "document", 
                             "mime-type": "application/markdown",
                             "name": "Localhost EHR Notes", 
-                            "url": "http://localhost:8080/", 
+                            "url": "http://localhost:8080/"
                         },
                         {
                             "context": "document", 
                             "mime-type": "image/jpeg",
                             "name": "Image Viewer", 
-                            "url": "http://localhost:8888/", 
+                            "url": "http://localhost:8888/"
                         }
                     ]
                 }         

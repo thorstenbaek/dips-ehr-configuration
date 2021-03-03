@@ -44,13 +44,13 @@
                         {"context": "patient", "name": "EHR Notes", "url": "https://ehr-notes.dips-ehr-notes.api.dips.no/"},
                         {
                             "context": "document", 
-                            "mime-type": "application/markdown",
+                            "mimetype": "application/markdown",
                             "name": "Localhost EHR Notes", 
                             "url": "http://localhost:8080/"
                         },
                         {
                             "context": "document", 
-                            "mime-type": "image/jpeg",
+                            "mimetype": "image/jpeg",
                             "name": "Image Viewer", 
                             "url": "http://localhost:8888/"
                         }

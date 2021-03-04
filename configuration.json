@@ -57,7 +57,7 @@
                         "context": "document", 
                         "mimetype": "application/pdf",
                         "name": "PDF Viewer", 
-                        "url": "http://localhost:8889/"
+                        "url": "https://local.dips-ehr-pdf.localhost"
                     }
                 ]
             }         

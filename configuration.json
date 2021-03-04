@@ -40,12 +40,11 @@
                 "SmartOnFhirApps": 
                 [
                     {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://local.nav-pleiepenger.localhost/"},
-                    {"context": "patient", "name": "EHR Notes", "url": "https://local.dips-ehr-notes.localhost/"},
+                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://local.nav-pleiepenger.localhost/"},                    
                     {
                         "context": "document", 
                         "mimetype": "application/markdown",
-                        "name": "Localhost EHR Notes", 
+                        "name": "EHR Notes", 
                         "url": "https://local.dips-ehr-notes.localhost/"
                     },
                     {
@@ -57,7 +56,7 @@
                     {
                         "context": "document", 
                         "mimetype": "application/pdf",
-                        "name": "Image Viewer", 
+                        "name": "PDF Viewer", 
                         "url": "https://local.dips-ehr-pdf.localhost/"
                     }
                 ]

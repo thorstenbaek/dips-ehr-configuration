@@ -65,28 +65,33 @@
         {
             "environment": "localhost:3000",
             "settings":             
-                {
-                    "FhirServiceUri": "https://ehr-notes2.dips.fhir.service.api.dips.no",
-                    "SecurityServiceUri": "https://ehr-notes2.dips-ehr-security.api.dips.no",
-                    "SmartOnFhirApps": 
-                    [
-                        {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"context": "patient", "name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"},
-                        {"context": "patient", "name": "EHR Notes", "url": "https://ehr-notes.dips-ehr-notes.api.dips.no/"},
-                        {
-                            "context": "document", 
-                            "mimetype": "application/markdown",
-                            "name": "Localhost EHR Notes", 
-                            "url": "http://localhost:8080/"
-                        },
-                        {
-                            "context": "document", 
-                            "mimetype": "image/jpeg",
-                            "name": "Image Viewer", 
-                            "url": "http://localhost:8888/"
-                        }
-                    ]
-                }         
+            {
+                "FhirServiceUri": "https://local.dips.fhir.service.localhost",
+                "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
+                "SmartOnFhirApps": 
+                [
+                    {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://local.nav-pleiepenger.localhost/"},                    
+                    {
+                        "context": "document", 
+                        "mimetype": "application/markdown",
+                        "name": "EHR Notes", 
+                        "url": "https://local.dips-ehr-notes.localhost/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "image/jpeg",
+                        "name": "Image Viewer", 
+                        "url": "https://local.dips-ehr-images.localhost/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "application/pdf",
+                        "name": "PDF Viewer", 
+                        "url": "https://local.dips-ehr-pdf.localhost"
+                    }
+                ]
+            }         
         },        
         {
             "environment": "localhost:8080",

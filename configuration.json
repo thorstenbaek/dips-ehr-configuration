@@ -96,15 +96,33 @@
         {
             "environment": "localhost:8080",
             "settings":             
-                {
-                    "FhirServiceUri" : "https://dips.fhir.service.api.dips.no",
-                    "SecurityServiceUri" : "https://dips-ehr-security.api.dips.no",
-                    "SmartOnFhirApps" : 
-                    [
-                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "NAV Pleiepenger", "url": "https://nav-pleiepenger.api.dips.no/"}
-                    ]
-                }         
+            {
+                "FhirServiceUri": "https://local.dips.fhir.service.localhost",
+                "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
+                "SmartOnFhirApps": 
+                [
+                    {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://local.nav-pleiepenger.localhost/"},                    
+                    {
+                        "context": "document", 
+                        "mimetype": "application/markdown",
+                        "name": "EHR Notes", 
+                        "url": "https://localhost:8888/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "image/jpeg",
+                        "name": "Image Viewer", 
+                        "url": "https://local.dips-ehr-images.localhost/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "application/pdf",
+                        "name": "PDF Viewer", 
+                        "url": "https://local.dips-ehr-pdf.localhost"
+                    }
+                ]
+            }               
         },        
         {
             "environment": "ehr-notes.dips-ehr-app.api.dips.no",

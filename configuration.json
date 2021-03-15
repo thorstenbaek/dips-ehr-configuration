@@ -45,7 +45,7 @@
                         "context": "document", 
                         "mimetype": "application/markdown",
                         "name": "EHR Notes", 
-                        "url": "http://localhost:8080"
+                        "url": "https://local.dips-ehr-notes.localhost"
                     },
                     {
                         "context": "document", 

@@ -63,6 +63,13 @@
             }         
         },
         {
+            "environment": "localhost:8080_ehr-notes",
+            "settings":             
+            {
+                "SessionsApiUrl": "http://localhost:4000",
+            }         
+        },
+        {
             "environment": "localhost:3000",
             "settings":             
             {

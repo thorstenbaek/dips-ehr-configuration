@@ -69,8 +69,8 @@
                 "SessionsApiUrl": "http://localhost:4000"
             }         
         },
-        {
-            "environment": "local.ehr-notes.localhost_ehr-notes",
+        {            
+            "environment": "local.dips-ehr-notes.localhost_ehr-notes",
             "settings":             
             {                
                 "SessionsApiUrl": "https://local.dips-ehr-notes-session-api.localhost"

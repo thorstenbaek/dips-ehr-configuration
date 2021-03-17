@@ -61,14 +61,7 @@
                     }
                 ]
             }         
-        },
-        {
-            "environment": "localhost:8080_ehr-notes",
-            "settings":             
-            {
-                "SessionsApiUrl": "http://localhost:4000"
-            }         
-        },
+        },        
         {            
             "environment": "local.dips-ehr-notes.localhost_ehr-notes",
             "settings":             
@@ -76,6 +69,44 @@
                 "SessionsApiUrl": "https://local.dips-ehr-notes-session-api.localhost"
             }         
         },
+        {
+            "environment": "bjorn.dips-ehr-app.api.dips.no",            
+            "settings":             
+            {
+                "FhirServiceUri": "https://bjorn.dips.fhir.service.api.dips.no",
+                "SecurityServiceUri": "https://bjorn.dips-ehr-security.api.dips.no",
+                "SmartOnFhirApps": 
+                [
+                    {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://bjorn.nav-pleiepenger.api.dips.no/"},                    
+                    {
+                        "context": "document", 
+                        "mimetype": "application/markdown",
+                        "name": "EHR Notes", 
+                        "url": "http://localhost:8080/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "image/jpeg",
+                        "name": "Image Viewer", 
+                        "url": "https://bjorn.dips-ehr-images.api.dips.no/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "application/pdf",
+                        "name": "PDF Viewer", 
+                        "url": "https://bjorn.dips-ehr-pdf.api.dips.no/"
+                    }
+                ]
+            }             
+        },
+        {
+            "environment": "localhost:8080_ehr-notes",
+            "settings":             
+            {
+                "SessionsApiUrl": "http://localhost:4000"
+            }         
+        },        
         {
             "environment": "localhost:3000",
             "settings":             

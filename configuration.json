@@ -79,6 +79,7 @@
                 [
                     {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
                     {"context": "patient", "name": "NAV Pleiepenger", "url": "https://bjorn.nav-pleiepenger.api.dips.no/"},                    
+                    {"context": "patient", "name": "DIPS Simplest SMART App", "url": "http://localhost:8889/"},
                     {
                         "context": "document", 
                         "mimetype": "application/markdown",

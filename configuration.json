@@ -35,7 +35,7 @@
             "environment": "local.dips-ehr-app.localhost",
             "settings":             
             {
-                "FhirServiceUri": "https://local.dips.fhir.service.localhost",
+                "FhirServiceUri": "https://classicetl2.dips.no/DIPS-WebAPI/HL7/FHIRDSTU2",
                 "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
                 "SmartOnFhirApps": 
                 [

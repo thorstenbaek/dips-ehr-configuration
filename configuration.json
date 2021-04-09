@@ -35,7 +35,7 @@
             "environment": "local.dips-ehr-app.localhost",
             "settings":             
             {
-                "FhirServiceUri": "https://dips.azure-api.net/fhir/patient",
+                "FhirServiceUri": "https://dips.azure-api.net/FHIR/",                                
                 "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
                 "SmartOnFhirApps": 
                 [
@@ -112,12 +112,7 @@
             "environment": "localhost:3000",
             "settings":             
             {
-                "FhirServiceMetadataUri": "https://dips.azure-api.net/FHIR/Metadata",
-                "FhirServicePractitionerUri": "https://dips.azure-api.net/FHIR/Practitioner",
-                "FhirServicePatientUri": "https://dips.azure-api.net/fhir/Patient",
-                "FhirServiceEncounterUri": "https://dips.azure-api.net/fhir/Encounter",
-                "FhirServiceDocumentReferenceUri"; "https://dips.azure-api.net/FHIR/DocumentReference",
-                
+                "FhirServiceUri": "https://dips.azure-api.net/FHIR/",                                
                 "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
                 "SmartOnFhirApps": 
                 [

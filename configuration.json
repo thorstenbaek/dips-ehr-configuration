@@ -21,13 +21,30 @@
             "environment": "test.dips-ehr-app.localhost",
             "settings":             
                 {
-                    "FhirServiceUri" : "https://test.dips.fhir.service.localhost",
+                    "FhirServiceUri" : "https://dips.azure-api.net/FHIR",
                     "SecurityServiceUri" : "https://test.dips-ehr-security.localhost",
                     "SmartOnFhirApps" : 
                     [
-                        {"name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                        {"name": "NAV Pleiepenger", "url": "https://test.nav-pleiepenger.localhost/"},
-                        {"name": "Localhost EHR Notes", "url": "http://localhost:8080/"}
+                        {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                        {"context": "patient", "name": "NAV Pleiepenger", "url": "https://test.nav-pleiepenger.localhost/"},                    
+                        {
+                            "context": "document", 
+                            "mimetype": "application/markdown",
+                            "name": "EHR Notes", 
+                            "url": "http://test.dips-ehr-notes.localhost/"
+                        },
+                        {
+                            "context": "document", 
+                            "mimetype": "image/jpeg",
+                            "name": "Image Viewer", 
+                            "url": "https://test.dips-ehr-images.localhost/"
+                        },
+                        {
+                            "context": "document", 
+                            "mimetype": "application/pdf",
+                            "name": "PDF Viewer", 
+                            "url": "https://test.dips-ehr-pdf.localhost"
+                        }
                     ]
                 }         
         },
@@ -35,7 +52,7 @@
             "environment": "local.dips-ehr-app.localhost",
             "settings":             
             {
-                "FhirServiceUri": "https://local.dips-fhir-service.localhost/",                                
+                "FhirServiceUri": "https://local.dips-fhir-service.localhost",                                
                 "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
                 "SmartOnFhirApps": 
                 [

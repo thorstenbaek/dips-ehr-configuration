@@ -35,7 +35,7 @@
             "environment": "local.dips-ehr-app.localhost",
             "settings":             
             {
-                "FhirServiceUri": "https://dips.azure-api.net/FHIR/",                                
+                "FhirServiceUri": "https://local.dips-fhir-service.localhost/",                                
                 "SecurityServiceUri": "https://local.dips-ehr-security.localhost",
                 "SmartOnFhirApps": 
                 [

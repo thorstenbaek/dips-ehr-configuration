@@ -249,10 +249,11 @@
                 "SmartOnFhirApps": 
                 [
                     {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
-                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://sof.nav-pleiepenger.api.dips.no/"},                    
+                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://sof.nav-pleiepenger.api.dips.no/"},   
+                    {"context": "patient", "name": "Simplest SMART on FHIR app", "url": "http://localhost:8889"},                       
                     {
                         "context": "document", 
-                        "mimetype": "application/markdown",
+                        "mimetype": "application/markdown", 
                         "name": "EHR Notes", 
                         "url": "https://sof.dips-ehr-notes.api.dips.no/"
                     },

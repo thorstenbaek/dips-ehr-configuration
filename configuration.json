@@ -241,6 +241,45 @@
             }         
         },
         {
+            "environment": "sof.dips-ehr-app.api.dips.no",            
+            "settings":             
+            {
+                "FhirServiceUri": "https://sof.dips.fhir.service.api.dips.no",
+                "SecurityServiceUri": "https://sof.dips-ehr-security.api.dips.no",
+                "SmartOnFhirApps": 
+                [
+                    {"context": "patient", "name": "Growth Chart FHIR", "url": "https://examples.smarthealthit.org/growth-chart-app/launch.html"},
+                    {"context": "patient", "name": "NAV Pleiepenger", "url": "https://sof.nav-pleiepenger.api.dips.no/"},                    
+                    {
+                        "context": "document", 
+                        "mimetype": "application/markdown",
+                        "name": "EHR Notes", 
+                        "url": "https://sof.dips-ehr-notes.api.dips.no/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "image/jpeg",
+                        "name": "Image Viewer", 
+                        "url": "https://sof.dips-ehr-images.api.dips.no/"
+                    },
+                    {
+                        "context": "document", 
+                        "mimetype": "application/pdf",
+                        "name": "PDF Viewer", 
+                        "url": "https://sof.dips-ehr-pdf.api.dips.no/"
+                    }
+                ]
+            }             
+        },
+        {
+            "environment": "sof.dips-ehr-notes.api.dips.no_ehr-notes",
+            "settings":             
+            {                
+                "SessionsApiUrl": "https://sof.dips-ehr-notes-session-api.api.dips.no"
+            }         
+        },
+        
+        {
             "environment": "eivind.dips-ehr-app.api.dips.no",
             "settings":             
                 {
